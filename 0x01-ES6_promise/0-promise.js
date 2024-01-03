@@ -1,7 +1,4 @@
 function getResponseFromAPI() {
-  return new Promise((resolve, reject) => {
-    const responseData = {status: "success", data: "Sample data from API" };
-    resolve(responseData);
-  });
+  return new Promise(() => {});
 }
 export default getResponseFromAPI;
