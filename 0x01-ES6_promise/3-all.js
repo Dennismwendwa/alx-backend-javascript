@@ -4,7 +4,7 @@ function handleProfileSignup() {
   const photoPromise = uploadPhoto();
   const userPromise = createUser();
 
-  return Promise.all([photoPromise,nuserPromise])
+  return Promise.all([photoPromise,userPromise])
     .then((data) => {
       const result = Object.assign(...data);
       console.log(`${result.body} ${result.firstName} ${result.lastName}`);
