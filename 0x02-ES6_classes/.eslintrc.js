@@ -8,6 +8,7 @@ module.exports = {
     'airbnb-base',
     'plugin:jest/all',
   ],
+  extends: 'airbnb-base',
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
