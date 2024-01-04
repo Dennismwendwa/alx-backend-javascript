@@ -10,7 +10,6 @@ import ClassRoom from './0-classroom.js';
  * }
  */
 
-function initializeRooms() {
+export class function initializeRooms() {
   return [19, 20, 34].map((cat) => new ClassRoom(cat));
 }
-export default initializeRooms;
