@@ -1,4 +1,9 @@
 import ClassRoom from './0-classroom.js';
+
+/**
+ * Creates an array of classes
+ * @return the array of the classes
+ */
 function initializeRooms() {
   const room1 = new ClassRoom(19);
   const room2 = new ClassRoom(20);
