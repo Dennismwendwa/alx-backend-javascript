@@ -1,5 +1,3 @@
-const cloneKey = Symbol('cloneKey');
-
 class Car {
   constructor(brand, motor, color) {
     this._brand = brand;
@@ -14,7 +12,7 @@ class Car {
   cloneCar() {
     const clonedCar = this.constructor[Symbol.species];
 
-    return new clonedCar();
+    return new this.constructor();
   }
 }
 
