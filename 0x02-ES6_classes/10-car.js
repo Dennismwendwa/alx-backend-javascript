@@ -10,8 +10,6 @@ class Car {
   }
 
   cloneCar() {
-    const clonedCar = this.constructor[Symbol.species];
-
     return new this.constructor();
   }
 }
