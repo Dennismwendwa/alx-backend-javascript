@@ -1,4 +1,4 @@
-import Car from './10-car.js';
+import Car from './10-car';
 
 class EVCar extends Car {
   constructor(brand, motor, color, range) {
@@ -11,8 +11,8 @@ class EVCar extends Car {
   }
 
   cloneCar() {
-    const clonedCar = super.constructor[Symbol.species];
-    return new clonedCar();
+    const ClonedCar = super.constructor[Symbol.species];
+    return new ClonedCar();
   }
 }
 export default EVCar;
