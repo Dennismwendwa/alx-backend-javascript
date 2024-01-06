@@ -15,7 +15,7 @@ class Currency {
     if (typeof value === 'string') {
       this._code = value;
     } else {
-      throw new TypeError("Code must be a string");
+      throw new TypeError('Code must be a string');
     }
   }
 
@@ -27,7 +27,7 @@ class Currency {
     if (typeof value === 'string') {
       this._name = value;
     } else {
-      throw new TypeError("Name must be a string");
+      throw new TypeError('Name must be a string');
     }
   }
 
