@@ -13,8 +13,9 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2021,
     sourceType: 'module',
+    "parser": "babel-eslint",
   },
   plugins: ['jest'],
   rules: {
