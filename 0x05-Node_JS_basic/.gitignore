@@ -6,3 +6,5 @@ package.json
 node_modules/
 .eslintrc.js
 2-main_0.js
+3-main_0.js
+3-main_1.js
