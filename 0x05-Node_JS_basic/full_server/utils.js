@@ -24,4 +24,4 @@ const readDatabase = (filePath) => {
   });
 };
 
-module.export = readDatabase;
+module.exports = readDatabase;

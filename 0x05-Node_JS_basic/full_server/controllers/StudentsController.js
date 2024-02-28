@@ -43,4 +43,4 @@ const formatStudents = (students) => {
   return formattedStudents;
 };
 
-module.export = StudentsController;
+module.exports = StudentsController;
