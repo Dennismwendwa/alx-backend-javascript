@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "test": "mocha"
+  },
+  "scripts": {
+    "lint": "semistandard"
+  },
+  "devDependencies": {
+    "mocha": "^10.3.0",
+    "semistandard": "^17.0.0"
+  }
+}
