@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function countStudents (path) {
+function countStudents(path) {
   return new Promise((resolve, reject) => {
     fs.readFile(path, 'utf-8', (err, data) => {
       if (err) {
@@ -24,10 +24,10 @@ function countStudents (path) {
         notInUse.push(age);
 
         if (field === 'CS') {
-          csCount++;
+          csCount = csCount + 1;
           csNames.push(firstName);
         } else if (field === 'SWE') {
-          sweCount++;
+          sweCount = sweCount + 1;
           sweNames.push(firstName);
         }
       });
