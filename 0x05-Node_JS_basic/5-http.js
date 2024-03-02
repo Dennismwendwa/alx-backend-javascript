@@ -8,7 +8,7 @@ const [, , databaseFileName] = process.argv;
 
 const fs = require('fs');
 
-function countStudents (path) {
+function countStudents(path) {
   return new Promise((resolve, reject) => {
     fs.readFile(path, 'utf-8', (err, data) => {
       if (err) {
@@ -32,10 +32,10 @@ function countStudents (path) {
         notInUse.push(age);
 
         if (field === 'CS') {
-          csCount++;
+          csCount = csCount + 1;
           csNames.push(firstName);
         } else if (field === 'SWE') {
-          sweCount++;
+          sweCount = csCount + 1;
           sweNames.push(firstName);
         }
       });
@@ -43,16 +43,16 @@ function countStudents (path) {
         totalStudents: rows.length - 1,
         cs: {
           count: csCount,
-          list: csNames.join(', ')
+          list: csNames.join(', '),
         },
         swe: {
           count: sweCount,
-          list: sweNames.join(', ')
+          list: sweNames.join(', '),
         },
-        notInUse
+        notInUse,
       };
 
-      const output = `\nNumber of students: ${result.totalStudents}\nNumber of students in CS: ${result.cs.count}. List: ${result.cs.list}\nNumber of students in SWE: ${result.swe.count}. List: ${result.swe.list}`;
+      const output = `Number of students: ${result.totalStudents}\nNumber of students in CS: ${result.cs.count}. List: ${result.cs.list}\nNumber of students in SWE: ${result.swe.count}. List: ${result.swe.list}`;
 
       resolve(output);
     });
@@ -67,7 +67,7 @@ const app = http.createServer((req, res) => {
   } else if (req.url === '/students') {
     const handleStudents = async () => {
       try {
-        res.write('This is the list of our students');
+        res.write('This is the list of our students\n');
         const result = await countStudents(databaseFileName);
 
         res.end(`${result}`);
